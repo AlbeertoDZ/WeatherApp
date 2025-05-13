@@ -1,12 +1,43 @@
-# React + Vite
+# 🌦️ Weather App con React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación simple de clima desarrollada con **React** que muestra la información meteorológica de una ciudad en los proximos 3 dias mediante la API de **OpenWeatherMap**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+- ✅ Proyecto realizado con React.
+- 🏙️ Llamada a la API de OpenWeatherMap para mostrar el clima de la ciudad.
+- 🔄 Manejo de formulario con `setValue` y `setPosts` para cambiar la ciudad manualmente.
+- 📡 Uso de `axios` para las llamadas HTTP a las APIs.
+- 🔃 Al cambiar de ciudad, se hace una nueva llamada a la API y se actualiza la información en pantalla.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧰 Tecnologías utilizadas
+
+- React
+- React Hooks: `useState`, `useEffect`
+- Axios
+- OpenWeatherMap API
+
+---
+
+## 🖼️ Capturas de pantalla
+
+<img src="./src/assets/captura.png" alt="Captura de pantalla de la aplicación" width="600" />
+
+---
+
+## 🚀 Cómo iniciar el proyecto
+
+```bash
+# Clona el repositorio
+git clone https://github.com/AlbeertoDZ/WeatherApp.git
+cd WeatherApp
+
+# Instala las dependencias
+npm install
+
+# Crea tu archivo de entorno
+cp .env.example .env

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
 import WeatherCard from "./WeatherCard"
+import { v4 as uuidv4 } from 'uuid';
 
 const WeatherList = () => {
 
@@ -8,12 +9,17 @@ const WeatherList = () => {
   const [value, setValue] = useState("Madrid");
   const [posts, setPosts] = useState([]);
 
+  const paintData = () => posts.map((post, index) => <WeatherCard key={uuidv4()} city={post} />);
+
+
   useEffect(() => {
     async function fetchData(){
       try{
         // Peticion HTTP
-        const res = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${value}&units=metric&appid=${import.meta.env.VITE_API_KEY}`)
-        const json = await res.data
+        const res = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${value}&units=metric&appid=${import.meta.env.VITE_API_KEY}`)
+        
+        // api.openweathermap.org/data/2.5/forecast?q=${value}&units=metric&appid=${import.meta.env.VITE_API_KEY} 
+        const json = await res.data.list
         console.log(json)
 
         // Guarda en el array de posts el resultado. Procesa los datos
@@ -46,14 +52,13 @@ const WeatherList = () => {
   
 
   return <section className="city">
-  <h1>Ciudad</h1>
+  <h2>Ciudad: {value}</h2>
   <form onSubmit={handleSubmit}> 
     <input name="city" />
     <button>Buscar🔍</button>
   </form>
 
-
-    {<WeatherCard key={posts.id} city={posts} />}  
+    <article className="weather-list">{paintData()}</article>
   </section>;
   
   
