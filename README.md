@@ -25,7 +25,7 @@ Este proyecto es una aplicación simple de clima desarrollada con **React** que 
 
 ## 🖼️ Capturas de pantalla
 
-<img src="./src/assets/captura.png" alt="Captura de pantalla de la aplicación" width="600" />
+<img src="./src/assets/captura.png" alt="Captura de pantalla de la aplicación" width="300" />
 
 ---
 
@@ -39,5 +39,9 @@ cd WeatherApp
 # Instala las dependencias
 npm install
 
-# Crea tu archivo de entorno
+# Crea tu archivo de entorno con la API KEY de la web de OpenWeatherMap
 cp .env.example .env
+
+# Iniciar el proyecto
+npm run dev
+
