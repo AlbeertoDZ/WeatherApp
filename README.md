@@ -45,3 +45,4 @@ cp .env.example .env
 # Iniciar el proyecto
 npm run dev
 
+#Pagina del proyecto
