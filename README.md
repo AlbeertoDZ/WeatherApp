@@ -46,3 +46,4 @@ cp .env.example .env
 npm run dev
 
 #Pagina del proyecto
+https://weatherapp111112.netlify.app/
