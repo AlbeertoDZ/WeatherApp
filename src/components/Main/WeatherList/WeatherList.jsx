@@ -16,7 +16,7 @@ const WeatherList = () => {
     async function fetchData(){
       try{
         // Peticion HTTP
-        const res = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${value}&units=metric&appid=${import.meta.env.VITE_API_KEY}`)
+        const res = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${value}&units=metric&appid=${import.meta.env.VITE_API_KEY}`)
         
         // api.openweathermap.org/data/2.5/forecast?q=${value}&units=metric&appid=${import.meta.env.VITE_API_KEY} 
         const json = await res.data.list
